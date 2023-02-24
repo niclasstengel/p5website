@@ -6,7 +6,7 @@
   --infoBar-background: rgba(248, 244, 237, 0.5);
 
   --font-family: "PP Radio Grotesk", sans-serif;
-  --font-size: 22px;
+  --font-size: 20px;
   --is-body: 16px;
 
   --padding: 60px;
@@ -309,15 +309,15 @@ a.anchor {
 
 .closed {
   padding: 0;
-  right: -85vw;
-  bottom: -90vh;
+  right: -84vw;
+  bottom: -88vh;
   color: var(--text-color-black);
   background: none;
 }
 
 .closed:hover {
-  right: -83.5vw;
-  bottom: -88.5vh;
+  right: -82.5vw;
+  bottom: -86.5vh;
 }
 
 
