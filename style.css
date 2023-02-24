@@ -1,0 +1,505 @@
+:root {
+  --accent-color: #F8F4ED;
+  --background-color: #1A1A1A;
+  --text-color-black: #1A1A1A;
+  --text-color-white: var(--accent-color);
+  --infoBar-background: rgba(248, 244, 237, 0.5);
+
+  --font-family: "PP Radio Grotesk", sans-serif;
+  --font-size: 24px;
+  --is-body: 18px;
+
+  --padding: 60px;
+  --padding-small: 24px;
+  --paragraph-break: 12px;
+  --transition: all .3s linear 0s;
+  --sp-sketch-width: 55%;
+  --info-bar-height: 120px;
+}
+
+@font-face {
+  font-family: "PP Radio Grotesk";
+  src: url(assets/font/PPRadioGrotesk-Regular.otf);
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP Radio Grotesk";
+  src: url(assets/font/PPRadioGrotesk-RegularItalic.otf);
+  font-weight: 400;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "PP Radio Grotesk";
+  src: url(assets/font/PPRadioGrotesk-Black.otf);
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "PP Radio Grotesk";
+  src: url(assets/font/PPRadioGrotesk-BlackItalic.otf);
+  font-weight: 600;
+  font-style: italic;
+}
+
+html,
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+  scroll-behavior: smooth;
+  text-transform: lowercase;
+}
+
+body {
+  color: var(--text-color-white);
+  background: var(--background-color);
+  padding: var(--padding);
+  overflow-x: hidden;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -4.5vh;
+  visibility: hidden;
+}
+
+.is-body {
+  font-size: var(--is-body);
+}
+
+.paragraph::after {
+  margin-top: 16px;
+}
+
+.pp-body {
+  color: var(--text-color-black);
+  background: var(--accent-color);
+}
+
+
+.hero-wrapper {
+  padding-top: var(--padding-small);
+  margin-bottom: 24vh;
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "p5 h1"
+    "sketches sketches";
+  gap: 48px 0px;
+  justify-items: end;
+}
+
+.p5-div {
+  width: 36vw;
+  height: 18vw;
+}
+
+.sketches-div {
+  width: 82.08vw;
+  height: 18vw;
+}
+
+.p5-div {
+  grid-area: p5;
+  justify-self: start;
+
+}
+
+.hero-text {
+  grid-area: h1;
+  text-align: end;
+  align-self: end;
+  justify-self: end;
+  padding-bottom: 5vh;
+}
+
+.sketches-div {
+  grid-area: sketches;
+}
+
+#scribblep5,
+#scribblesketch {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+#scribblep5 canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#scribbleketch canvas {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+
+#menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aspect-ratio-1 {
+  width: 30%;
+  position: relative;
+  aspect-ratio: 1/1;
+}
+
+
+.menu-link {
+  color: var(--text-color-black);
+  position: relative;
+  text-align: center;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.absolute-wrapper {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+
+#scribbleTriangle,
+#scribbleRect,
+#scribbleCircle {
+  position: relative;
+  justify-self: end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#scribbleTriangle {
+  width: 27.5vw;
+  height: 27.5vw;
+}
+
+#scribbleCircle,
+#scribbleRect {
+  width: 24.0625vw;
+  height: 24.0625vw;
+}
+
+
+.align-end {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.project-canvas-container {
+  width: 15vw;
+  height: 15vw;
+  position: relative;
+}
+
+#scribbleMenu {
+  height: 100%;
+  position: relative;
+  z-index: 0;
+  top: 0vh;
+  left: 0vw;
+}
+
+#scribbleRect canvas,
+#scribbleCircle canvas,
+#scribbleTriangle canvas,
+#scribbleMenu canvas,
+.project-canvas-container>canvas,
+#sketchAscii canvas,
+#sketchHouse canvas,
+#sketchJson canvas,
+#sketchEye canvas,
+#sketchTicTacToe canvas,
+#sketchAbout canvas,
+#sketchContact canvas,
+#sketchBlackX canvas,
+#sketchSandX canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#sketchAscii,
+#houseSketch,
+#sketchJson,
+#sketchEye,
+#sketchTicTacToe,
+#sketchAbout,
+#sketchContact,
+#sketchBlackX,
+#sketchSandX {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.sketch-about-wrapper {
+  width: calc(6vw * 3.75);
+  height: 6vw;
+}
+
+.sketch-contact-wrapper {
+  width: calc(6vw * 5.275);
+  height: 6vw;
+}
+
+
+.menu-scribble-wrapper {
+  display: none;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  height: 140%;
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.hide {
+  display: block;
+  opacity: 1;
+}
+
+.menu {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  z-index: 99999;
+  overflow: hidden;
+
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  gap: 144px;
+  padding: var(--padding);
+  background: var(--background-color);
+  color: var(--accent-color);
+
+  -webkit-transition: var(--transition);
+  transition: var(--transition);
+}
+
+#open-menu-button {
+  pointer-events: none;
+}
+
+
+
+
+
+.closed {
+  padding: 0;
+  right: -85vw;
+  bottom: -90vh;
+  color: var(--text-color-black);
+  background: none;
+}
+
+.closed:hover {
+  right: -83.5vw;
+  bottom: -88.5vh;
+}
+
+
+#open-close-menu,
+.info-bar {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.info-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: var(--info-bar-height);
+  padding: var(--padding);
+  padding-bottom: var(--padding-small);
+  background: var(--infoBar-background);
+  border-bottom: 1px solid black;
+
+}
+
+.info-bar-opened,
+.info-bar-closed {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-bar-opened {
+  padding: 0;
+}
+
+.info-bar-closed {
+  padding: 4vh 6.5vw;
+}
+
+.close-x-container {
+  width: 60px;
+  height: 60px;
+}
+
+.close-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+}
+
+
+.project-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--padding);
+}
+
+.project-wrapper {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* justify-content: space-between;
+    display: flex;
+    flex-direction: row; */
+  gap: var(--padding);
+
+}
+
+#project1,
+#project2,
+#project3,
+#project4,
+#project5,
+#project5,
+#project6 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1;
+}
+
+.project-link {
+  color: var(--text-color-black);
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 0px;
+  pointer-events: none;
+}
+
+
+.sp-wrapper {
+  position: fixed;
+  top: var(--info-bar-height);
+  left: 0;
+  padding: var(--padding);
+  width: 100%;
+  height: calc(100vh - var(--info-bar-height));
+  overflow-y: scroll;
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+}
+
+.sp-wrapper::-webkit-scrollbar {
+  display: none;
+}
+
+
+.sp-divider {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: calc(2 * var(--padding));
+  align-items: flex-start;
+}
+
+.sp-sketch {
+  position: fixed;
+  top: calc(var(--info-bar-height) + var(--padding));
+  left: var(--padding);
+
+  display: inline-block;
+  /* shrink wrap */
+  width: 40%;
+  aspect-ratio: 1 / 1;
+
+}
+
+.sp-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - var(--sp-sketch-width) - var(--padding));
+  gap: var(--is-body);
+}
+
+.sp-paragraph-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--paragraph-break);
+}
+
+.sp-title {
+  margin-bottom: var(--padding-small);
+}
+
+
+.text-wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: var(--is-body);
+}
+
+.link {
+  text-decoration: underline;
+}
+
+.link-wrapper-horizontal,
+.link-wrapper-vertical {
+  display: flex;
+  flex-direction: row;
+  gap: var(--is-body);
+}
+
+.link-wrapper-vertical {
+  flex-direction: column;
+  gap: calc(1 / 3 * var(--is-body));
+
+}

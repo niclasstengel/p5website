@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>about</title>
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script defer src="./assets/website-js/script.js"></script>
+  <script defer src="./assets/website-js/scribbleTriangle.js"></script>
+  <script defer src="./assets/website-js/scribbleRect.js"></script>
+  <script defer src="./assets/website-js/scribbleCircle.js"></script>
+  <script defer src="./assets/website-js/scribbleMenu.js"></script>
+  <script defer src="./assets/website-js/aboutsketch.js"></script>
+  <script defer src="./assets/website-js/sandX.js"></script>
+
+
+
+
+
+
+</head>
+
+<body>
+  <header>
+    <a class="anchor" id="about-section"></a>
+    <div class="project-section">
+      <div class="sketch-contact-wrapper">
+        <div id="sketchAbout"></div>
+      </div>
+      <div class="text-wrapper">
+        <p clas="is-body paragraph">
+          This website is a compilation of my p5 sketches from the course "Visual Stories with Code and Data" at the
+          University of Applied Sciences Potsdam given by <a class="link"
+            href="https://www.linkedin.com/in/vogelino/">Lucas Vogel.</a> The course aimed to provide an outlook on the
+          potential of code for all types of designers. We learned the basics of programming with JavaScript and its
+          code library p5.js.
+          Additionally, we gained an insight into the basics of HTML and CSS to create this website, where we can now
+          showcase, share, and collect our p5.js experiments.
+        </p>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- menu -->
+  <div class="menu closed">
+    <div id="open-close-menu" class="info-bar-opened info-bar-closed">
+      <a id="open-menu-button" class="test">menu</a>
+      <div id="close-menu-button" class="close-wrapper">
+        <p>close menu</p>
+        <div class="close-x-container">
+          <div id="sketchSandX"></div>
+        </div>
+      </div>
+      <div class="menu-scribble-wrapper hide">
+        <div id="scribbleMenu"></div>
+      </div>
+    </div>
+    <div id="menu-wrapper">
+      <a class="aspect-ratio-1" href="./index.html#project-section">
+        <div id="scribbleCircle">
+          <p class="menu-link">sketches</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1" href="./about.html">
+        <div id="scribbleTriangle">
+          <p class="menu-link">about</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1 align-end" href="./contact.html">
+        <div id="scribbleRect">
+          <p class="menu-link">contact</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+</html>

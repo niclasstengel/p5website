@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>tic tac toe</title>
+  <link href="../reset.css" rel="stylesheet" type="text/css" />
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script defer src="../assets/website-js/script.js"></script>
+  <script defer src="../assets/website-js/scribbleTriangle.js"></script>
+  <script defer src="../assets/website-js/scribbleRect.js"></script>
+  <script defer src="../assets/website-js/scribbleCircle.js"></script>
+  <script defer src="../assets/website-js/scribbleMenu.js"></script>
+  <script defer src="../assets/p5-projects/project-tictactoe/project-tictactoe.js"></script>
+  <script defer src="../assets/website-js/blackX.js"></script>
+  <script defer src="../assets/website-js/sandX.js"></script>
+
+
+
+
+</head>
+
+<body class="pp-body">
+  <header>
+    <div class="info-bar">
+      <a>tic tac toe</a>
+      <a id="close-sketch" href="../index.html#project-section">
+        <div class="close-wrapper">
+          <p>close sketch</p>
+          <div class="close-x-container">
+            <div id="sketchBlackX"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- menu -->
+  <div class="menu closed">
+    <div id="open-close-menu" class="info-bar-opened info-bar-closed">
+      <a id="open-menu-button" class="test">menu</a>
+      <div id="close-menu-button" class="close-wrapper">
+        <p>close menu</p>
+        <div class="close-x-container">
+          <div id="sketchSandX"></div>
+        </div>
+      </div>
+      <div class="menu-scribble-wrapper hide">
+        <div id="scribbleMenu"></div>
+      </div>
+    </div>
+    <div id="menu-wrapper">
+      <a class="aspect-ratio-1" href="../index.html#project-section">
+        <div id="scribbleCircle">
+          <p class="menu-link">sketches</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1" href="../about.html">
+        <div id="scribbleTriangle">
+          <p class="menu-link">about</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1 align-end" href="../contact.html">
+        <div id="scribbleRect">
+          <p class="menu-link">contact</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sp-wrapper">
+    <div class="sp-divider">
+      <div class="sp-sketch">
+        <div id="sketchTicTacToe"></div>
+      </div>
+      <div class="sp-text-wrapper">
+        <div class="sp-paragraph-wrapper">
+          <p class="is-body paragraph">
+            the goal of the tictactoe task was to code an interpretation of the minigame to further practice arrays,
+            conditions and functions.
+          </p>
+          <p class="is-body paragraph">
+            i wanted to experiment with images and try out how they can be included in p5sketches.
+          </p>
+          <p class="is-body paragraph">
+            it was very tricky to capture the random value that alternates the images and use it to draw the "selected"
+            image on the canvas. the problem was that the background grid had to be redrawn over and over again so that
+            the cursor images were not constantly drawn on the canvas.
+          </p>
+          <p class="is-body paragraph">
+            the next step would be to build it for two players. my idea was to select between player 1 or 2 with a
+            button or by pressing a specific key while clicking. it would also be nice that as soon as the first image
+            is drawn, it is saved and drawn with each subsequent click.
+          </p>
+        </div>
+        <div class="link-wrapper-vertical">
+          <a class="link is-body"
+            href="https://github.com/niclasstengel/visuelle-geschichten-mit-code-und-daten/tree/main/tictactoe-instance-mode">
+            code on github
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</html>

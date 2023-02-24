@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>visualizing json data</title>
+  <link href="../reset.css" rel="stylesheet" type="text/css" />
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script defer src="../assets/website-js/script.js"></script>
+  <script defer src="../assets/website-js/scribbleTriangle.js"></script>
+  <script defer src="../assets/website-js/scribbleRect.js"></script>
+  <script defer src="../assets/website-js/scribbleCircle.js"></script>
+  <script defer src="../assets/website-js/scribbleMenu.js"></script>
+  <script defer src="../assets/p5-projects/project-json/project-json.js"></script>
+  <script defer src="../assets/website-js/blackX.js"></script>
+  <script defer src="../assets/website-js/sandX.js"></script>
+</head>
+
+<body class="pp-body">
+  <header>
+    <div class="info-bar">
+      <a>visualizing json data</a>
+      <a id="close-sketch" href="../index.html#project-section">
+        <div class="close-wrapper">
+          <p>close sketch</p>
+          <div class="close-x-container">
+            <div id="sketchBlackX"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- menu -->
+  <div class="menu closed">
+    <div id="open-close-menu" class="info-bar-opened info-bar-closed">
+      <a id="open-menu-button" class="test">menu</a>
+      <div id="close-menu-button" class="close-wrapper">
+        <p>close menu</p>
+        <div class="close-x-container">
+          <div id="sketchSandX"></div>
+        </div>
+      </div>
+      <div class="menu-scribble-wrapper hide">
+        <div id="scribbleMenu"></div>
+      </div>
+    </div>
+    <div id="menu-wrapper">
+      <a class="aspect-ratio-1" href="../index.html#project-section">
+        <div id="scribbleCircle">
+          <p class="menu-link">sketches</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1" href="../about.html">
+        <div id="scribbleTriangle">
+          <p class="menu-link">about</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1 align-end" href="../contact.html">
+        <div id="scribbleRect">
+          <p class="menu-link">contact</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sp-wrapper">
+    <div class="sp-divider">
+      <div class="sp-sketch">
+        <div id="sketchJson"></div>
+      </div>
+      <div class="sp-text-wrapper">
+        <div class="sp-paragraph-wrapper">
+          <p class="is-body paragraph">
+            in this small experiment the goal was to use json data to generate visual artifacts. wether it was going the
+            be usefull or just visually appealling was up to us.
+          </p>
+          <p class="is-body paragraph">
+            since working with json datasets quickly becomes very complicated, i chose a small dataset with the name
+            "health and social structure atlas in berlin 2022". it compares the quality of life in different districts
+            in berlin. the data is based on indicators such as the unemployment rate, the poverty risk rate and life
+            expectancy.
+          </p>
+          <p class="is-body paragraph">
+            these in turn produce a value that i used to determine the radius and the fluctuations of the circles of the
+            districts. The smoother the circle, the better the district is doing. This allows you to compare them very
+            quickly and easily at a glance.
+          </p>
+          <p class="is-body paragraph">
+            however, only an overall picture is shown here. to expand the code, i would like to add deeper levels. by
+            clicking on a district you could compare the different indices and get a detailed insight into the reasons
+            for the overall rating.
+          </p>
+        </div>
+        <div class="link-wrapper-vertical">
+          <a class="link is-body"
+            href="https://github.com/niclasstengel/visuelle-geschichten-mit-code-und-daten/tree/main/json-instance-mode">
+            code on github
+          </a>
+          <a class="link is-body"
+            href="https://www.berlin.de/sen/gesundheit/service/gesundheitsberichterstattung/gesundheit-und-sozialstruktur/">
+            link to data source
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</html>

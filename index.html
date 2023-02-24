@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>p5.js explorations sketchy</title>
+  <link href="reset.css" rel="stylesheet" type="text/css" />
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script defer src="./assets/website-js/script.js"></script>
+  <script defer src="./assets/website-js/scribblep5.js"></script>
+  <script defer src="./assets/website-js/scribblesketch.js"></script>
+  <script defer src="./assets/website-js/scribbleTriangle.js"></script>
+  <script defer src="./assets/website-js/scribbleRect.js"></script>
+  <script defer src="./assets/website-js/scribbleCircle.js"></script>
+  <script defer src="./assets/website-js/scribbleMenu.js"></script>
+  <script defer src="./assets/website-js/project.js"></script>
+  <script defer src="./assets/website-js/sandX.js"></script>
+
+
+</head>
+
+<body>
+  <header>
+    <div class="hero-wrapper">
+      <div class="p5-div">
+        <div id="scribblep5"></div>
+      </div>
+      <h1 class="hero-text">this website is a collection of p5.js sketches</h1>
+      <div class="sketches-div">
+        <div id="scribblesketch"></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- menu -->
+  <div class="menu closed">
+    <div id="open-close-menu" class="info-bar-opened info-bar-closed">
+      <a id="open-menu-button">menu</a>
+      <div id="close-menu-button" class="close-wrapper">
+        <p>close menu</p>
+        <div class="close-x-container">
+          <div id="sketchSandX"></div>
+        </div>
+      </div>
+      
+        <div class="menu-scribble-wrapper hide">
+          <div id="scribbleMenu"></div>
+        </div>
+      
+    </div>
+    <div id="menu-wrapper">
+      <a class="aspect-ratio-1" href="./index.html#project-section">
+        <div id="scribbleCircle">
+          <p class="menu-link">sketches</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1" href="./about.html">
+        <div id="scribbleTriangle">
+          <p class="menu-link">about</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1 align-end" href="./contact.html">
+        <div id="scribbleRect">
+          <p class="menu-link">contact</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <a class="anchor" id="project-section"></a>
+  <div class="project-section">
+    <h2>sketches</h2>
+    <div class="project-wrapper">
+      <a id="project1" href="project-pages/project-digits.html">
+        <div class="project-link">
+          <p>ascii exploration</p>
+        </div>
+      </a>
+      <a id="project2" href="project-pages/project-house.html">
+        <div class="project-link">
+          <p>getting to know arrays and objects</p>
+        </div>
+      </a>
+      <a id="project3" href="project-pages/project-json.html">
+        <div class="project-link">
+          <p>visualizing json data</p>
+        </div>
+      </a>
+      <a id="project4" href="project-pages/project-eye.html">
+        <div class="project-link">
+          <p>little eye p5-sketch</p>
+        </div>
+      </a>
+      <a id="project5" href="project-pages/project-tictactoe.html">
+        <div class="project-link">
+          <p>tic tac toe</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+
+
+
+
+</html>

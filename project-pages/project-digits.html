@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>ascii exploration</title>
+  <link href="../reset.css" rel="stylesheet" type="text/css" />
+  <link href="../style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/p5@1.4.1/lib/p5.js"></script>
+  <script defer src="../assets/website-js/script.js"></script>
+  <script defer src="../assets/website-js/scribbleTriangle.js"></script>
+  <script defer src="../assets/website-js/scribbleRect.js"></script>
+  <script defer src="../assets/website-js/scribbleCircle.js"></script>
+  <script defer src="../assets/website-js/scribbleMenu.js"></script>
+  <script defer src="../assets/website-js/blackX.js"></script>
+  <script defer src="../assets/website-js/sandX.js"></script>
+  <script defer src="../assets/p5-projects/project-digit.js"></script>
+
+
+
+</head>
+
+<body class="pp-body">
+  <header>
+    <div class="info-bar">
+      <a>ascii exploration</a>
+      <a id="close-sketch" href="../index.html#project-section">
+        <div class="close-wrapper">
+          <p>close sketch</p>
+          <div class="close-x-container">
+            <div id="sketchBlackX"></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  </header>
+
+  <!-- menu -->
+  <div class="menu closed">
+    <div id="open-close-menu" class="info-bar-opened info-bar-closed">
+      <a id="open-menu-button" class="test">menu</a>
+      <div id="close-menu-button" class="close-wrapper">
+        <p>close menu</p>
+        <div class="close-x-container">
+          <div id="sketchSandX"></div>
+        </div>
+      </div>
+      <div class="menu-scribble-wrapper hide">
+        <div id="scribbleMenu"></div>
+      </div>
+    </div>
+    <div id="menu-wrapper">
+      <a class="aspect-ratio-1" href="../index.html#project-section">
+        <div id="scribbleCircle">
+          <p class="menu-link">sketches</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1" href="../about.html">
+        <div id="scribbleTriangle">
+          <p class="menu-link">about</p>
+        </div>
+      </a>
+      <a class="aspect-ratio-1 align-end" href="../contact.html">
+        <div id="scribbleRect">
+          <p class="menu-link">contact</p>
+        </div>
+      </a>
+    </div>
+  </div>
+
+  <div class="sp-wrapper">
+    <div class="sp-divider">
+      <div class="sp-sketch">
+        <div id="sketchAscii"></div>
+      </div>
+      <div class="sp-text-wrapper">
+        <div class="sp-paragraph-wrapper">
+          <p class="is-body paragraph">
+            the task in which "ascii exploration" was created was to look at perlin noise. the p5sketch was supposed to
+            find another application outside the course context.
+          </p>
+          <p class="is-body paragraph">
+            as the name suggests, the sketch is heavily influenced by ascii art. the code was originally meant to
+            capture movement via camera or webcam and display it on the ascii grid. to scale it down a bit and adapt it
+            to my coding skills, it ended up being a sketch with a ball that moves around on the canvas based on a noise
+            curve.
+          </p>
+          <p class="is-body paragraph">
+            the code is actually quite simple. first a grid is created with the different characters. they are all
+            individual objects with an own hitbox. the floating ball has a radius and its own hitbox aswell. if the
+            hitbox of the ball intersects with the hitbox of the characters, it changes from character to number,
+            resulting in the shape of a ball within the grid.
+          </p>
+          <p class="is-body paragraph">
+            one problem with the code is that all characters get the same color value and therefore the sketch is
+            monochrome. another disadvantage is the principle of changing from character to number by the collision of
+            the hitboxes. because the hitboxes are fixed, you can only use simple geometric shapes, otherwise it becomes
+            extremely complicated to calculate the hitbox. my first thought was to work based on pixel values, but so
+            far I haven't found a solution that doesn't crash my browser.
+          </p>
+        </div>
+        <div class="link-wrapper-vertical">
+          <a class="link is-body"
+            href="https://github.com/niclasstengel/visuelle-geschichten-mit-code-und-daten/tree/main/digits-instance-mode">
+            code on github
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
